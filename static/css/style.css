@@ -19,8 +19,21 @@ hr {
   align-items: center;
 }
 
-.row #dns-text {
+.row .data-container {
+  align-items: center;
   flex-grow: 1;
+}
+
+.row .dns-count {
+  border-radius: 50%;
+  background: #f5f5f5;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  margin: 0 0.2em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -28,9 +41,17 @@ button {
   min-height: 1em;
   border: none;
   margin: 0 .25em 0 0;
-  padding: .8em 1.5em .8em;
+  padding: .5em .8em;
   border-radius: 0.3em;
   font-weight: 600;
+}
+
+.action-buttons {
+  margin-top: 0.7em;
+}
+
+.d-flex.action-buttons button {
+  flex-grow: 1;
 }
 
 .btn-danger {
