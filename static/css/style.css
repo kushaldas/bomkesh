@@ -1,0 +1,39 @@
+hr {
+  border: none;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.row {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5em;
+  align-items: center;
+}
+
+.row #dns-text {
+  flex-grow: 1;
+}
+
+button {
+  cursor: pointer;
+  min-height: 1em;
+  border: none;
+  margin: 0 .25em 0 0;
+  padding: .8em 1.5em .8em;
+  border-radius: 0.3em;
+  font-weight: 600;
+}
+
+.btn-danger {
+  background-color: #db2828;
+  color: #fff;
+}
