@@ -1,7 +1,8 @@
 ## Installation (for development purpose on a real vpn)
 
 We use [algo](https://github.com/trailofbits/algo) vpn as the base.
-Install algo on your favorite server.
+Install algo on your favorite server. Remember to use wireguard and
+with all default settings.
 
 
 ## Adding a initial iptables rule
