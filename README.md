@@ -14,8 +14,9 @@ changes in the iptables and IP range of the default algo installation.
 # iptables -I INPUT -s 10.19.49.2 -d 10.19.49.1  -j ACCEPT
 ```
 
-Next, run **bomkesh** tool in one terminal (use tmux) and the python
+Next, run **bomkesh** tool in one terminal (use tmux), **ajit** in a second terminal, and the python
 web app in another.
+
 
 ```bash
 python3 -m venv .venv
@@ -23,3 +24,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python3 app.py
 ```
+Proper installation instructions are coming in future. 
+
+
+## License GPLv3+
