@@ -14,6 +14,13 @@ changes in the iptables and IP range of the default algo installation.
 # iptables -I INPUT -s 10.19.49.2 -d 10.19.49.1  -j ACCEPT
 ```
 
+## Setting up dev instance
+
+You will need to get [bomcapture](https://github.com/kushaldas/bomcapture) repository on the server,
+on compiling that project, you will have two binaries, **bomcapture**, and **ajit**.
+
+Start a tmux session.
+
 Next, run **bomkesh** tool in one terminal (use tmux), **ajit** in a second terminal, and the python
 web app in another.
 
