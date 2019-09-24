@@ -31,6 +31,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python3 app.py
 ```
+The webapp can be seen at <http://10.19.49999.1:5000/dnsqueue>
+
 Proper installation instructions are coming in future. 
 
 
