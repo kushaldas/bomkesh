@@ -1,9 +1,16 @@
 from flask import Flask, render_template, jsonify
+from flask_sqlalchemy import SQLAlchemy
 import redis
 import json
+import os
 
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+from models import Dnsqueue, TCPPacket
 
 
 def init_redis():
