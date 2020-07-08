@@ -9,8 +9,8 @@ function getHtmlTemplate(name, type, count) {
       <div id="dns-text">
         ${name}
       </div>
-      <div class="dns-count">
-        ${count}
+      <div class="chip">
+        <div class="chip-label">${count}</div>
       </div>
     </div>
     <div class="action-buttons d-flex">

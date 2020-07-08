@@ -24,24 +24,38 @@ Start a tmux session.
 Next, run **bomkesh** tool in one terminal (use tmux), **ajit** in a second terminal, and the python
 web app in another.
 
-You will need to install postgresql for creation of databases
-Setup an environment variable `DATABASE_URL` and set it to 'postgresql://{user}:{pw}@{url}/{db}'.
+### Flask Configurations
 
+You will need to install postgresql for creation of databases.
+
+- Copy `.env.example` to `.env` and modify (or add) configs.
+- Need to modify `DATABASE_URL` in `.env` to 'postgresql://{user}:{pw}@{server}/{db}' based on your database configuration
+
+### Install Dependencies
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
+### Migrate and run Flask server
+
+```bash
 # create databases
 python3 manage.py db init
 python3 manage.py db upgrade
 
-python3 app.py
+python3 manage.py runserver
 ```
+That should start a server in [http://localhost:5000/dnsqueue](http://localhost:5000/dnsqueue)
+
+If you make changes in the model, run `python3 manage.py db migrate` to create a migration file
+
+
 The webapp can be seen at <http://10.19.49.1:5000/dnsqueue>
 
-Proper installation instructions are coming in future. 
+More instructions are coming in future.
 
 
 ## License GPLv3+

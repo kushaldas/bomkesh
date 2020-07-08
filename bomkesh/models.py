@@ -1,6 +1,5 @@
-from app import db
+from bomkesh import db
 from sqlalchemy.sql import func
-from sqlalchemy.dialects.postgresql import JSON
 
 
 class TCPPacket(db.Model):
@@ -31,14 +30,14 @@ class Dnsqueue(db.Model):
     domain_name = db.Column(db.String())
     domain_class = db.Column(db.String())
     domain_type = db.Column(db.String())
-    ip = db.Column(db.String())
+    ip_a = db.Column(db.String())
     timestamp = db.Column(db.DateTime(timezone=True), default=func.now())
 
     def __init__(self, domain_name, domain_class, domain_type, ip, timestamp):
         self.domain_name = domain_name
         self.domain_class = domain_class
         self.domain_type = domain_type
-        self.ip = ip
+        self.ip_a = ip
         self.timestamp = timestamp
 
     def __repr__(self):

@@ -1,5 +1,7 @@
+environs
 flask
 redis
 psycopg2
 Flask-SQLAlchemy
+Flask-Script
 Flask-Migrate==1.8.0

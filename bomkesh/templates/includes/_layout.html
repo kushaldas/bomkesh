@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 {% include "includes/_header.html" %}
 <body>
+  <div class="app-header">
+    <div class="page-title">{% block page_title %}{% endblock %}</div>
+  </div>
+  {% block extra_header %}{% endblock %}
   <div class="container">
     {% block body %}{% endblock %}
   </div>
