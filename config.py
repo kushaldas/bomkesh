@@ -1,6 +1,7 @@
 from environs import Env
 import redis
 
+
 class Config(object):
     env = Env()
     env.read_env()
@@ -18,9 +19,6 @@ class ProductionConfig(Config):
 class DevelopmentConfig(Config):
     DEBUG = True
 
+
 def init_redis():
-    return redis.Redis(
-        host='localhost',
-        port=6379,
-        db=0
-    )
+    return redis.Redis(host="localhost", port=6379, db=0)
