@@ -4,7 +4,7 @@ async function getData() {
   return dns_data;
 }
 
-function getHtmlTemplate(name, type, count) {
+function getHtmlTemplate(name, count) {
   return `<div class="d-flex data-container">
       <div id="dns-text">
         ${name}
@@ -28,10 +28,9 @@ function showData(data) {
     const dnsContainer = document.getElementById('dns-container');
     const dnsRow = document.createElement('div');
     dnsRow.setAttribute('class', 'row');
-    dnsRow.setAttribute('data-host', dns[0]['Name']);
-    dnsRow.setAttribute('data-type', dns[0]['Type']);
+    dnsRow.setAttribute('data-host', dns['qlist'][0]);
     const duplicateDns = document.querySelector(
-      '.row[data-host="' + dns[0]['Name'] + '"][data-type="' + dns[0]['Type'] + '"]'
+      '.row[data-host="' + dns['qlist'][0] + '"]'
     );
     let dnsCount = "1";
     if (duplicateDns) {
@@ -39,7 +38,7 @@ function showData(data) {
       dnsCount = Number(duplicateDns.getAttribute('data-count')) + 1;
     }
     dnsRow.setAttribute('data-count', dnsCount);
-    dnsRow.innerHTML = getHtmlTemplate(dns[0]['Name'], dns[0]['Type'], dnsCount);
+    dnsRow.innerHTML = getHtmlTemplate(dns['qlist'][0],  dnsCount);
     dnsContainer.appendChild(dnsRow);
   });
 }
